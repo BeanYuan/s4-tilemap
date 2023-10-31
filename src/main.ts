@@ -34,6 +34,7 @@ const selectHeight = selectCanvas.height / numSelectables;
 
 
 //creating the tilemap nested array
+//solo development
 const defaultImage = new Image();
 defaultImage.src = "/tile1.png";
 
