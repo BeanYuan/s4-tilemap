@@ -66,7 +66,7 @@ function drawTexture(row: number, col: number, ctx: CanvasRenderingContext2D, im
 
 
 // ----- Interacting with the main tilemap -----
-
+// end of pair development
 function redrawTilemap() {
     gridCtx.clearRect(0, 0, gridCanvas.width, gridCanvas.height);
     
