@@ -66,12 +66,15 @@ function drawTexture(row: number, col: number, ctx: CanvasRenderingContext2D, im
 
 // ----- Interacting with the main tilemap -----
 
-function redrawTilemap()
-{
-  gridCtx.clearRect(0, 0, gridCanvas.width, gridCanvas.height);
+function redrawTilemap() {
+    gridCtx.clearRect(0, 0, gridCanvas.width, gridCanvas.height);
+    
+    const cellWidth = gridCanvas.width / numTiles;
+    const cellHeight = gridCanvas.height / numTiles;
+    
     for (let i = 0; i < numTiles; i++) {
         for (let j = 0; j < numTiles; j++) {
-            drawTexture(i, j, gridCtx, tilemap[i][j], gridCanvas.width / numTiles, gridCanvas.height / numTiles, tileSize);
+            drawTexture(i, j, gridCtx, tilemap[i][j], cellWidth, cellHeight, tileSize);
         }
     }
 }
